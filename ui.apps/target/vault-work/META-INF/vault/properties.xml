@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>aem-utils - UI apps</comment>
+<entry key="createdBy">abuddhiraja</entry>
+<entry key="name">aem-utils.ui.apps</entry>
+<entry key="created">2018-02-01T16:39:18.788+0100</entry>
+<entry key="groupId">aem-utils</entry>
+<entry key="version">1.0-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">aem-utils</entry>
+<entry key="description">UI apps package for aem-utils</entry>
+<entry key="artifactId">aem-utils.ui.apps</entry>
+<entry key="path">/etc/packages/aem-utils/aem-utils.ui.apps.zip</entry>
+</properties>
