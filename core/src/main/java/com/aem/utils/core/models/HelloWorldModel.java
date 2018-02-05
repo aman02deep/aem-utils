@@ -20,9 +20,14 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.observation.ResourceChangeListener;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.settings.SlingSettingsService;
+
+import org.apache.sling.api.resource.observation.ResourceChange;
+
+import java.util.List;
 
 @Model(adaptables=Resource.class)
 public class HelloWorldModel {
@@ -33,6 +38,9 @@ public class HelloWorldModel {
     @Inject @Named("sling:resourceType") @Default(values="No resourceType")
     protected String resourceType;
 
+    @Inject
+    private String type;
+
     private String message;
 
     @PostConstruct
@@ -40,9 +48,15 @@ public class HelloWorldModel {
         message = "\tHello World!\n";
         message += "\tThis is instance: " + settings.getSlingId() + "\n";
         message += "\tResource type is: " + resourceType + "\n";
+
+        System.out.println("type: "+type);
+
+
     }
 
     public String getMessage() {
         return message;
     }
+
+
 }

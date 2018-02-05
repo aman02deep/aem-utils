@@ -3,9 +3,8 @@ package com.aem.utils.core.utils;
 import java.io.IOException;
 import java.util.Objects;
 
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.HttpStatus;
-import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
+import org.apache.commons.httpclient.*;
+import org.apache.commons.httpclient.auth.AuthScope;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.params.HttpMethodParams;
 import org.apache.commons.lang3.StringUtils;
@@ -41,6 +40,9 @@ public class HttpClientUtils {
             LOGGER.debug("Incorrect or Empty getMethod");
             return "Error";
         }
+
+        Credentials defaultcreds = new UsernamePasswordCredentials("admin", "admin");
+        client.getState().setCredentials(new AuthScope("localhost", 4502, AuthScope.ANY_REALM), defaultcreds);
 
         try {
             LOGGER.debug("Calling Service : {} ", getMethod.getPath());
