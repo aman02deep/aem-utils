@@ -19,8 +19,6 @@ import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
-
 @Model(adaptables = SlingHttpServletRequest.class)
 public class RedirectHandler {
 
@@ -77,33 +75,17 @@ public class RedirectHandler {
     }
 
     final int protocolIndex = redirectTarget.indexOf("//");
-    final int queryIndex = redirectTarget.indexOf("?");
-    final int hashIndex = redirectTarget.indexOf("#");
-    final String redirectPath;
-
+    
     LOG.debug("location: {}", redirectTarget);
-
+    
     if (protocolIndex > -1) {
-      redirectPath = redirectTarget;
+      return redirectTarget;
     } else if (StringUtils.equals(redirectTarget, currentPage.getPath())) {
-
       LOG.warn("{} is trying to redirect to self", currentPage.getPath());
-      redirectPath = "";
-
+      return "";
     } else {
-      // if not, check if we need to map a path that has a query or hash
-      String queryOrHash = "";
-      if (hashIndex > -1) {
-        queryOrHash = redirectTarget.substring(hashIndex);
-        redirectTarget = redirectTarget.substring(0, hashIndex).replace(".html", "");
-      }
-      if (queryIndex > -1) {
-        queryOrHash = redirectTarget.substring(queryIndex);
-        redirectTarget = redirectTarget.substring(0, queryIndex).replace(".html", "");
-      }
-      redirectPath = resourceResolver.map(redirectTarget) + ".html" + queryOrHash;
+      return resourceResolver.map(redirectTarget) + ".html";
     }
-    return redirectPath;
   }
 
   /**
@@ -113,6 +95,7 @@ public class RedirectHandler {
   public final int getRedirectStatus() {
     int redirectStatusCode = HttpStatus.SC_MOVED_TEMPORARILY;
 
+    /* Read status code from Page Properties */
     String redirectTarget = currentPage.getProperties().get("redirectStatusMovedPermanently",
         String.class);
 
