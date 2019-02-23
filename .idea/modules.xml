@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/aem-utils.iml" filepath="$PROJECT_DIR$/aem-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/aem-utils.core.iml" filepath="$PROJECT_DIR$/core/aem-utils.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui.apps/aem-utils.ui.apps.iml" filepath="$PROJECT_DIR$/ui.apps/aem-utils.ui.apps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui.content/aem-utils.ui.content.iml" filepath="$PROJECT_DIR$/ui.content/aem-utils.ui.content.iml" />
+    </modules>
+  </component>
+</project>
