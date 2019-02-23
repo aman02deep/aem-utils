@@ -1,0 +1,3 @@
+accordion-title.js
+maxalloweditem.js
+validations.js
