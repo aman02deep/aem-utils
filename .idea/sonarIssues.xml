@@ -43,6 +43,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/aem/utils/core/slingmodels/HTLStringUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/core/src/main/java/com/aem/utils/core/utils/RedirectHandler.java">
           <value>
             <set />
@@ -69,6 +74,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/core/src/test/java/com/mclaren/core/servlets/datasource/GenericDataSourceServletTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/test/resources/servlets/datasource/resource-with-empty-path.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/test/resources/servlets/datasource/resource.json">
           <value>
             <set />
           </value>

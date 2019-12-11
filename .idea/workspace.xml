@@ -4,7 +4,6 @@
     <list default="true" id="37581cd5-0189-4d30-967c-bf871f74874b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/test/java/com/aem/utils/core/context/AppAemContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/test/java/com/aem/utils/core/context/AppAemContextTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1550920896285</updated>
       <workItem from="1550920897703" duration="668000" />
-      <workItem from="1576067692059" duration="4066000" />
+      <workItem from="1576067692059" duration="4383000" />
     </task>
     <task id="LOCAL-00001" summary="git ignore file updated to ignore files.">
       <created>1576069640659</created>
