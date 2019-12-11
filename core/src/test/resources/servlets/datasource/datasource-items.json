@@ -1,0 +1,23 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "children": {
+    "jcr:primaryType": "nt:unstructured",
+    "text": "Child pages",
+    "value": "children"
+  },
+  "static": {
+    "jcr:primaryType": "nt:unstructured",
+    "text": "Fixed list",
+    "value": "static"
+  },
+  "search": {
+    "jcr:primaryType": "nt:unstructured",
+    "text": "Search",
+    "value": "search"
+  },
+  "tags": {
+    "jcr:primaryType": "nt:unstructured",
+    "text": "Tags",
+    "value": "tags"
+  }
+}

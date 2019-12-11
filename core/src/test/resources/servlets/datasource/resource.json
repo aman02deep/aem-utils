@@ -1,0 +1,11 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "name": "./type",
+  "fieldLabel": "Type",
+  "sling:resourceType": "granite/ui/components/foundation/form/select",
+  "datasource": {
+    "jcr:primaryType": "nt:unstructured",
+    "path": "/path/to/items",
+    "sling:resourceType": "mclaren/generic/datasource"
+  }
+}

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.adobe.cq:core.wcm.components.core:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/cq/core.wcm.components.core/unknown/core.wcm.components.core-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/cq/core.wcm.components.core/unknown/core.wcm.components.core-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/cq/core.wcm.components.core/unknown/core.wcm.components.core-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

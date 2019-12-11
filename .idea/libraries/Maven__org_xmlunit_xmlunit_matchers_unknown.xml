@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.xmlunit:xmlunit-matchers:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/xmlunit/xmlunit-matchers/unknown/xmlunit-matchers-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/xmlunit/xmlunit-matchers/unknown/xmlunit-matchers-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/xmlunit/xmlunit-matchers/unknown/xmlunit-matchers-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -8,8 +8,8 @@ import com.adobe.cq.sightly.SightlyWCMMode;
 import com.day.cq.wcm.api.Page;
 import com.google.common.net.HttpHeaders;
 
+import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.http.HttpStatus;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -36,8 +36,7 @@ public class RedirectHandler {
   @ScriptVariable(name = "wcmmode")
   private SightlyWCMMode wcmMode;
 
-  @PostConstruct
-  private void activate() throws IOException {
+  @PostConstruct private void activate() throws IOException {
 
     String redirectUrl = getRedirectTarget();
     int statusCode = getRedirectStatus();
@@ -75,9 +74,9 @@ public class RedirectHandler {
     }
 
     final int protocolIndex = redirectTarget.indexOf("//");
-    
+
     LOG.debug("location: {}", redirectTarget);
-    
+
     if (protocolIndex > -1) {
       return redirectTarget;
     } else if (StringUtils.equals(redirectTarget, currentPage.getPath())) {
@@ -90,14 +89,15 @@ public class RedirectHandler {
 
   /**
    * check for the redirect Status code and return accordingly
+   *
    * @return 301 or 302
    */
   public final int getRedirectStatus() {
     int redirectStatusCode = HttpStatus.SC_MOVED_TEMPORARILY;
 
     /* Read status code from Page Properties */
-    String redirectTarget = currentPage.getProperties().get("redirectStatusMovedPermanently",
-        String.class);
+    String redirectTarget =
+        currentPage.getProperties().get("redirectStatusMovedPermanently", String.class);
 
     if (StringUtils.isNotBlank(redirectTarget) && "true".equalsIgnoreCase(redirectTarget)) {
       redirectStatusCode = HttpStatus.SC_MOVED_PERMANENTLY;
