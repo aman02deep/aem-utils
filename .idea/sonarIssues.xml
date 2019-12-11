@@ -18,6 +18,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/aem/utils/core/services/XMLReadService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/aem/utils/core/services/impl/XMLReadServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/core/src/main/java/com/aem/utils/core/servlets/GenericDataSourceServlet.java">
           <value>
             <set />
@@ -39,6 +49,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/core/src/test/java/com/aem/utils/core/context/AppAemContextTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/test/java/com/aem/utils/core/servies/XMLReadServiceImplTest.java">
           <value>
             <set />
           </value>

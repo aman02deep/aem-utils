@@ -37,13 +37,13 @@ import org.osgi.service.component.annotations.Component;
  * - name = "./myselect"
  * + datasource
  * - path = "/apps/path/to/my/items"
- * - sling:resourceType = mclaren/generic/datasource"
+ * - sling:resourceType = aem-utils/generic/datasource"
  */
 
 @Component(service = Servlet.class,
            immediate = true,
-           property = {Constants.SERVICE_DESCRIPTION + "=McLaren - Generic Datasource Servlet",
-               "sling.servlet.resourceTypes=mclaren/generic/datasource",
+           property = {Constants.SERVICE_DESCRIPTION + "=Aem Utils - Generic Datasource Servlet",
+               "sling.servlet.resourceTypes=aem-utils/generic/datasource",
                "sling.servlet.methods=" + HttpConstants.METHOD_GET})
 public class GenericDataSourceServlet extends SlingSafeMethodsServlet {
 

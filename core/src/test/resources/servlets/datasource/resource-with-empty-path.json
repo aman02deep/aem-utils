@@ -6,6 +6,6 @@
   "datasource": {
     "jcr:primaryType": "nt:unstructured",
     "path": "",
-    "sling:resourceType": "mclaren/generic/datasource"
+    "sling:resourceType": "aem-utils/generic/datasource"
   }
 }

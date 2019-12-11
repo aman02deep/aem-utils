@@ -3,6 +3,8 @@ package com.aem.utils.core.context;
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextBuilder;
 
+import java.io.IOException;
+
 import javax.script.Bindings;
 import javax.script.SimpleBindings;
 
@@ -14,6 +16,7 @@ import com.day.cq.wcm.api.WCMMode;
 import com.day.cq.wcm.api.designer.Style;
 import com.day.cq.wcm.scripting.WCMBindingsConstants;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.api.scripting.SlingBindings;
@@ -35,9 +38,10 @@ public class AppAemContextTest {
         // shared context setup code for all tests
         .<AemContext>afterSetUp(context -> {
           // register sling models
-          context.addModelsForPackage("com.mclaren.core");
+          context.addModelsForPackage("com.aem.utils.core");
           context.addModelsForPackage("com.adobe.cq.wcm.core.components");
-          context.registerService(ImplementationPicker.class, new ResourceTypeBasedResourcePicker());
+          context
+              .registerService(ImplementationPicker.class, new ResourceTypeBasedResourcePicker());
         }).build();
   }
 
@@ -102,10 +106,22 @@ public class AppAemContextTest {
     bindings.put(WCMBindingsConstants.NAME_CURRENT_PAGE, context.currentPage());
 
     Style style = Mockito.mock(Style.class);
-    when(style.get(any(), any(Object.class))).thenAnswer(
-        invocation -> invocation.getArguments()[1]
-    );
+    when(style.get(any(), any(Object.class)))
+        .thenAnswer(invocation -> invocation.getArguments()[1]);
     bindings.put(WCMBindingsConstants.NAME_CURRENT_STYLE, style);
   }
 
+  /**
+   * @param fileName
+   * @return String JSON
+   */
+  public static String getFile(String fileName) {
+    try {
+      return IOUtils
+          .toString(AppAemContextTest.class.getClassLoader().getResourceAsStream(fileName),
+              "UTF-8");
+    } catch (IOException e) {
+      return "";
+    }
+  }
 }
